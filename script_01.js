@@ -39,17 +39,18 @@ function getOp() {
     }  
 }
 function isOpValid(op) {
+    return op == "+" || op == "-" || op != "*" || op != ":" ;
 
-    switch (op) {
-        case "+":
-        case "-":
-        case "*":
-        case ":":
-        case "/":
-            return true;
-        default:
-            return false;
-    }
+    // switch (op) {
+    //     case "+":
+    //     case "-":
+    //     case "*":
+    //     case ":":
+    //     case "/":
+    //         return true;
+    //     default:
+    //         return false;
+    // }
     
 }
 // function getNumber2() {
