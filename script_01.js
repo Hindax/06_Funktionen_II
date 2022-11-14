@@ -12,14 +12,9 @@
 startApp();
 function startApp() {
     output(Calculator(getNumber("Zahl 1"),getNumber("Zahl 2"),getOp()));
-
-    // if (getNumber != Number) {
-    //     console.log("Plrease insert a valid Number");
-    // }
-    // if (typeof num != "number")
-
     
 }
+
 function getNumber(figure) {
     let inputStr = prompt("Bitte " + figure + " eingeben")
     let num = parseInt(inputStr);
@@ -31,49 +26,39 @@ function getNumber(figure) {
 output(getOp());
 function getOp() {
     let op = prompt("Please insert an operator");
-
     if (isOpValid(op)) {
         return "operator ok";
     } else {
         return "operator not ok";
     }  
 }
-function isOpValid(op) {
-    return op == "+" || op == "-" || op != "*" || op != ":" ;
 
-    // switch (op) {
-    //     case "+":
-    //     case "-":
-    //     case "*":
-    //     case ":":
-    //     case "/":
-    //         return true;
-    //     default:
-    //         return false;
-    // }
+function isOpValid(op) {
+
+    switch (op) {
+        case "+":
+        case "-":
+        case "*":
+        case ":":
+        case "/":
+            return true;
+        default:
+            return false;
+    }
     
 }
-// function getNumber2() {
-//     let inputStr = prompt("Bitte Zahl 2 eingeben")
-//     let num = parseInt(inputStr);
-//     return num;
-
-// function getOp() {
-//     let op = prompt("Bitte +,-,*,/: eingeben")
-//     return op;
-// }
 
 
+// module: calculator | tests:
+// agreement : "+","-","*",":"
+// output(calculator(2,2,"+"));
+// output(calculator(2,2,"-"));
+// output(calculator(2,2,"*"));
+// output(calculator(2,2,":"));
+// output(calculator(2,0,"/"));
+// output(calculator(2,2,"#?!"));
 
 
-//Module: calculator tester
-// agreement: "+", "-", "*", ":"
-
-// output(Calculator(2,3,"+"));
-// output(Calculator(2,2,"-"));
-// output(Calculator(6,7,"*"));
-// output(Calculator(5,0,":"));
-// output(Calculator(4,5,"$$"));
 
 
 function Calculator(a,b,op) {
@@ -98,7 +83,7 @@ function Calculator(a,b,op) {
 
 }
 
-// modul division a / b
+// modul division a / b | test
 // output(divide(2,3));
 // output(divide(2,-3));
 // output(divide(2,0));
@@ -106,27 +91,15 @@ function Calculator(a,b,op) {
 function divide(a,b) {
 
     if (b == 0) {
-        return "ERROR";
+        return "Division by 0 not possible!";
         
     } else {
         return a / b;
-        
     }
+}
     
 
-    // if (b != 0) {
-    //     // true
-    //     return a / b;
-    // } else { 
-    //     //false
-    //     return "ERROR"
-    // }
-
-    // return a / b;
-}
-
-
-// module multiply a*b
+// module multiplication a * b | test
 // output(multiply(2,3));
 // output(multiply(2,-3));
 // output(multiply(2,0));
@@ -152,16 +125,17 @@ function add(a,b) {;
 }
 
 
-// module: console output test
+// module: console output |test
 
 // output("Hello");
 // output(2);
 function output(outputData) {
+    // console.log(typeof outputData);
 
     if (typeof outputData == "number") {
         console.log("The result is :" + outputData); 
     } else {
-        console.log("Error " + outputData);
+        console.log("Error: " + outputData);
         
     }
 }
