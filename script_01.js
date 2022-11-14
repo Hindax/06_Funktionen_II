@@ -11,19 +11,58 @@
 // Application , App
 startApp();
 function startApp() {
-    output(Calculator(getNumber1(),getNumber2(),getOp()));
+    output(Calculator(getNumber("Zahl 1"),getNumber("Zahl 2"),getOp()));
+
+    // if (getNumber != Number) {
+    //     console.log("Plrease insert a valid Number");
+    // }
+    // if (typeof num != "number")
+
     
 }
-function getNumber1() {
-    return 2;
-    
+function getNumber(figure) {
+    let inputStr = prompt("Bitte " + figure + " eingeben")
+    let num = parseInt(inputStr);
+    return num;
 }
-function getNumber2() {
-    return 2;
-}
+
+
+// module: input operator, test
+output(getOp());
 function getOp() {
-    return "+";
+    let op = prompt("Please insert an operator");
+
+    if (isOpValid(op)) {
+        return "operator ok";
+    } else {
+        return "operator not ok";
+    }  
 }
+function isOpValid(op) {
+
+    switch (op) {
+        case "+":
+        case "-":
+        case "*":
+        case ":":
+        case "/":
+            return true;
+        default:
+            return false;
+    }
+    
+}
+// function getNumber2() {
+//     let inputStr = prompt("Bitte Zahl 2 eingeben")
+//     let num = parseInt(inputStr);
+//     return num;
+
+// function getOp() {
+//     let op = prompt("Bitte +,-,*,/: eingeben")
+//     return op;
+// }
+
+
 
 
 //Module: calculator tester
