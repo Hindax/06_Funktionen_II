@@ -12,34 +12,41 @@
 //Module: calculator tester
 // agreement: "+", "-", "*", ":"
 
-output(Calculator("+"));
-output(Calculator("-"));
-output(Calculator("*"));
-output(Calculator(":"));
-output(Calculator("$$"));
+output(Calculator(2,3,"+"));
+output(Calculator(2,2,"-"));
+output(Calculator(6,7,"*"));
+output(Calculator(5,0,":"));
+output(Calculator(4,5,"$$"));
 
 
-function Calculator(op) {
+
+function Calculator(a,b,op) {
     switch (op) {
         case "+": // addition
-            return "add";  
+            return add(a,b);  
 
         case "-": // substraction
-            return "sub";
+            return substract(a,b);
             
         case "*": // multiplikation
-            return "mul";
+            return multiply(a,b);
 
-        case ":": // dicvision
-            return "div";
+        case ":": // division
+        case "/": // division
+            return divide(a,b);
     
         default: // Error
             return "Something went wrong!"
     }
     
+
 }
 
 // modul division a / b
+// output(divide(2,3));
+// output(divide(2,-3));
+// output(divide(2,0));
+// output(divide(0,2));
 function divide(a,b) {
 
     if (b == 0) {
@@ -64,17 +71,26 @@ function divide(a,b) {
 
 
 // module multiply a*b
+// output(multiply(2,3));
+// output(multiply(2,-3));
+// output(multiply(2,0));
 function multiply(a,b) {
     return a * b;
 }
 
 // module substraction a - b
+// output(subtract(2,3));
+// output(subtract(2,-3));
+// output(subtract(2,0));
 function substract(a,b) {
     return a - b;
 }
 
 
 // module addition a+b test
+// output(add(2,3));
+// output(add(2,-3));
+// output(add(2,0));
 function add(a,b) {;
     return a + b;
 }
