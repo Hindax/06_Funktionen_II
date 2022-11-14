@@ -9,16 +9,31 @@
 */
 
 
-// module multiply a*b
+// modul division a / b
+output(divide(14,3));
+output(divide(8,2));
+output(divide(2,0));
+output(divide(0,2));
+function divide(a,b) {
 
-output(multiply(7,1));
-output(multiply(9,10));
-function multiply(a,b) {
-    return a * b;
+    if (b != 0) {
+        // true
+        return a / b;
+    } else { 
+        //false
+        return "ERROR"
+    }
+
+    return a / b;
 }
 
 
-
+// module multiply a*b
+// output(multiply(7,1));
+// output(multiply(9,10));
+function multiply(a,b) {
+    return a * b;
+}
 
 
 // module substraction a - b
@@ -36,8 +51,6 @@ function substract(a,b) {
 function add(a,b) {;
     return a + b;
 }
-
-
 
 
 
