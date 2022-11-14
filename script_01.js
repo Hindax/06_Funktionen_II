@@ -8,16 +8,32 @@
 4. Ausgabe in Konsole : check!
 */
 
+// Application , App
+startApp();
+function startApp() {
+    output(Calculator(getNumber1(),getNumber2(),getOp()));
+    
+}
+function getNumber1() {
+    return 2;
+    
+}
+function getNumber2() {
+    return 2;
+}
+function getOp() {
+    return "+";
+}
+
 
 //Module: calculator tester
 // agreement: "+", "-", "*", ":"
 
-output(Calculator(2,3,"+"));
-output(Calculator(2,2,"-"));
-output(Calculator(6,7,"*"));
-output(Calculator(5,0,":"));
-output(Calculator(4,5,"$$"));
-
+// output(Calculator(2,3,"+"));
+// output(Calculator(2,2,"-"));
+// output(Calculator(6,7,"*"));
+// output(Calculator(5,0,":"));
+// output(Calculator(4,5,"$$"));
 
 
 function Calculator(a,b,op) {
@@ -98,8 +114,8 @@ function add(a,b) {;
 
 // module: console output test
 
-output("Hello");
-output(2);
+// output("Hello");
+// output(2);
 function output(outputData) {
 
     if (typeof outputData == "number") {
