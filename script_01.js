@@ -38,7 +38,7 @@ function Calculator(a,b,op) {
         default: // Error
             return "Something went wrong!"
     }
-    
+
 
 }
 
@@ -97,10 +97,17 @@ function add(a,b) {;
 
 
 // module: console output test
-// output("Hello");
-// output(2);
+
+output("Hello");
+output(2);
 function output(outputData) {
-    console.log(outputData);
+
+    if (typeof outputData == "number") {
+        console.log("The result is :" + outputData); 
+    } else {
+        console.log("Error " + outputData);
+        
+    }
 }
 
 
