@@ -16,16 +16,27 @@ output(divide(2,0));
 output(divide(0,2));
 function divide(a,b) {
 
-    if (b != 0) {
-        // true
+    if (b == 0) {
+        return "ERROR";
+        
+    } else {
         return a / b;
-    } else { 
-        //false
-        return "ERROR"
+        
     }
+    
 
-    return a / b;
+    // if (b != 0) {
+    //     // true
+    //     return a / b;
+    // } else { 
+    //     //false
+    //     return "ERROR"
+    // }
+
+    // return a / b;
 }
+
+// Division variante 2
 
 
 // module multiply a*b
