@@ -9,9 +9,21 @@
 */
 
 
+// module multiply a*b
+
+output(multiply(7,1));
+output(multiply(9,10));
+function multiply(a,b) {
+    return a * b;
+}
+
+
+
+
+
 // module substraction a - b
-output(substract(5,1));
-output(substract(10,4))
+// output(substract(5,1));
+// output(substract(10,4))
 function substract(a,b) {
     return a - b;
 }
