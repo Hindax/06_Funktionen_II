@@ -22,6 +22,7 @@ function getNumber(figure) {
 }
 
 
+
 // module: input operator, test
 output(getOp());
 function getOp() {
